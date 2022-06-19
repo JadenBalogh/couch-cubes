@@ -384,6 +384,10 @@ PrefabInstance:
       propertyPath: deathEffectPrefab
       value: 
       objectReference: {fileID: 8323202325416061856, guid: 8a06f95e2381a4747b179fb0b0d8d827, type: 3}
+    - target: {fileID: 7609826150058174204, guid: 0475a1eb359812a4cb2616a172d31c8b, type: 3}
+      propertyPath: knockbackEffectPrefab
+      value: 
+      objectReference: {fileID: 1271200720637796070, guid: 99ddf72eeaed97843bebe78b84bafdb8, type: 3}
     - target: {fileID: 7609826150058174206, guid: 0475a1eb359812a4cb2616a172d31c8b, type: 3}
       propertyPath: m_RootOrder
       value: 5
@@ -925,6 +929,10 @@ PrefabInstance:
       propertyPath: deathEffectPrefab
       value: 
       objectReference: {fileID: 3002624918201982469, guid: 3ecc8b095314ce348bd83c614866d7a9, type: 3}
+    - target: {fileID: 7609826150058174204, guid: 0475a1eb359812a4cb2616a172d31c8b, type: 3}
+      propertyPath: knockbackEffectPrefab
+      value: 
+      objectReference: {fileID: 1271200720637796070, guid: 99ddf72eeaed97843bebe78b84bafdb8, type: 3}
     - target: {fileID: 7609826150058174206, guid: 0475a1eb359812a4cb2616a172d31c8b, type: 3}
       propertyPath: m_RootOrder
       value: 4
