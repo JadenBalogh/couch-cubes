@@ -3137,14 +3137,14 @@ MonoBehaviour:
   rightKnockbackKey: 108
   upKnockbackKey: 105
   downKnockbackKey: 107
-  maxHitDistance: 3
+  maxHitDistance: 1.6
   minKnockbackForce: 8
   maxKnockbackForce: 16
   enemy: {fileID: 7609826149959814353}
   enemyLayer:
     serializedVersion: 2
     m_Bits: 128
-  knockbackEffectPrefab: {fileID: 1271200720637796070, guid: 99ddf72eeaed97843bebe78b84bafdb8, type: 3}
+  knockbackEffectPrefab: {fileID: 1271200720637796070, guid: 89f7ff88d0d8b2e478410f79aee2d308, type: 3}
   deathEffectPrefab: {fileID: 3002624918201982469, guid: 3ecc8b095314ce348bd83c614866d7a9, type: 3}
   winText: {fileID: 249006042}
   winMessage: Player 1 Wins!
@@ -3310,14 +3310,14 @@ MonoBehaviour:
   rightKnockbackKey: 262
   upKnockbackKey: 264
   downKnockbackKey: 261
-  maxHitDistance: 3
+  maxHitDistance: 1.6
   minKnockbackForce: 8
   maxKnockbackForce: 16
   enemy: {fileID: 7609826149767001545}
   enemyLayer:
     serializedVersion: 2
     m_Bits: 64
-  knockbackEffectPrefab: {fileID: 1271200720637796070, guid: 99ddf72eeaed97843bebe78b84bafdb8, type: 3}
+  knockbackEffectPrefab: {fileID: 1271200720637796070, guid: 0305e0dd8bf52c34f8aafe6521e9859d, type: 3}
   deathEffectPrefab: {fileID: 8323202325416061856, guid: 8a06f95e2381a4747b179fb0b0d8d827, type: 3}
   winText: {fileID: 249006042}
   winMessage: Player 2 Wins!
