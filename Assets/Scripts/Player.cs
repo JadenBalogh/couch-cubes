@@ -72,6 +72,11 @@ public class Player : MonoBehaviour
         rigidbody2D.AddForce(Vector2.right * horizontal * moveForce * moveMult);
     }
 
+    public void Die()
+    {
+        Destroy(gameObject);
+    }
+
     public void Knockback(Vector2 force)
     {
         rigidbody2D.AddForce(force, ForceMode2D.Impulse);
