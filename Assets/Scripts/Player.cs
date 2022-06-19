@@ -57,22 +57,41 @@ public class Player : MonoBehaviour
             jumps++;
         }
 
-        if (Input.GetKeyDown(leftKnockbackKey) && HasTarget(-1, 0))
+        if (Input.GetKeyDown(leftKnockbackKey))
         {
-            Debug.Log("Left");
-            enemy.Knockback(RegisterKnockback(Vector2.left));
+            Instantiate(knockbackEffectPrefab, transform.position, Quaternion.AngleAxis(Vector2.SignedAngle(Vector2.up, Vector2.left), Vector3.forward));
+
+            if (HasTarget(-1, 0))
+            {
+                enemy.Knockback(RegisterKnockback(Vector2.left));
+            }
         }
-        else if (Input.GetKeyDown(rightKnockbackKey) && HasTarget(1, 0))
+        else if (Input.GetKeyDown(rightKnockbackKey))
         {
-            enemy.Knockback(RegisterKnockback(Vector2.right));
+            Instantiate(knockbackEffectPrefab, transform.position, Quaternion.AngleAxis(Vector2.SignedAngle(Vector2.up, Vector2.right), Vector3.forward));
+
+            if (HasTarget(1, 0))
+            {
+                enemy.Knockback(RegisterKnockback(Vector2.right));
+            }
         }
-        else if (Input.GetKeyDown(upKnockbackKey) && HasTarget(0, 1))
+        else if (Input.GetKeyDown(upKnockbackKey))
         {
-            enemy.Knockback(RegisterKnockback(Vector2.up));
+            Instantiate(knockbackEffectPrefab, transform.position, Quaternion.AngleAxis(0, Vector3.forward));
+
+            if (HasTarget(0, 1))
+            {
+                enemy.Knockback(RegisterKnockback(Vector2.up));
+            }
         }
-        else if (Input.GetKeyDown(downKnockbackKey) && HasTarget(0, -1))
+        else if (Input.GetKeyDown(downKnockbackKey))
         {
-            enemy.Knockback(RegisterKnockback(Vector2.down));
+            Instantiate(knockbackEffectPrefab, transform.position, Quaternion.AngleAxis(Vector2.SignedAngle(Vector2.up, Vector2.down), Vector3.forward));
+
+            if (HasTarget(0, -1))
+            {
+                enemy.Knockback(RegisterKnockback(Vector2.down));
+            }
         }
 
         float moveMult = 1f;
@@ -112,7 +131,6 @@ public class Player : MonoBehaviour
 
     private Vector2 RegisterKnockback(Vector2 dir)
     {
-        Instantiate(knockbackEffectPrefab, transform.position, Quaternion.AngleAxis(Vector2.Angle(Vector2.up, dir), Vector3.forward));
 
         float enemyDist = Vector2.Distance(transform.position, enemy.transform.position);
         float knockbackForce = Mathf.Lerp(maxKnockbackForce, minKnockbackForce, enemyDist / maxHitDistance);
