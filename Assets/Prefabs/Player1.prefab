@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 7609826150058174207}
   - component: {fileID: 7609826150058174203}
   - component: {fileID: 7609826150058174204}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Player1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -149,9 +149,21 @@ MonoBehaviour:
   leftKey: 97
   rightKey: 100
   jumpKey: 119
-  moveForce: 4
+  moveForce: 6
+  maxMoveSpeed: 5
   jumpForce: 6
   maxJumps: 2
   groundLayer:
     serializedVersion: 2
-    m_Bits: 1
+    m_Bits: 193
+  leftKnockbackKey: 106
+  rightKnockbackKey: 108
+  upKnockbackKey: 105
+  downKnockbackKey: 107
+  maxHitDistance: 3
+  minKnockbackForce: 8
+  maxKnockbackForce: 20
+  enemy: {fileID: 0}
+  enemyLayer:
+    serializedVersion: 2
+    m_Bits: 128
