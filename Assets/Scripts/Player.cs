@@ -26,6 +26,7 @@ public class Player : MonoBehaviour
     [SerializeField] private float maxKnockbackForce = 10f;
     [SerializeField] private Player enemy;
     [SerializeField] private LayerMask enemyLayer;
+    [SerializeField] private GameObject deathEffectPrefab;
 
     [Header("UI")]
     [SerializeField] private TextMeshProUGUI winText;
@@ -84,6 +85,7 @@ public class Player : MonoBehaviour
     public void Die()
     {
         enemy.Win();
+        Instantiate(deathEffectPrefab, transform.position, Quaternion.identity);
         Destroy(gameObject);
     }
 
