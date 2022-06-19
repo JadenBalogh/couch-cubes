@@ -53,6 +53,7 @@ public class Player : MonoBehaviour
 
         if (Input.GetKeyDown(jumpKey) && jumps < maxJumps)
         {
+            rigidbody2D.velocity = Vector2.right * rigidbody2D.velocity;
             rigidbody2D.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
             jumps++;
         }
@@ -131,7 +132,6 @@ public class Player : MonoBehaviour
 
     private Vector2 RegisterKnockback(Vector2 dir)
     {
-
         float enemyDist = Vector2.Distance(transform.position, enemy.transform.position);
         float knockbackForce = Mathf.Lerp(maxKnockbackForce, minKnockbackForce, enemyDist / maxHitDistance);
         return dir * knockbackForce;
@@ -139,7 +139,7 @@ public class Player : MonoBehaviour
 
     private bool HasTarget(int dirX, int dirY)
     {
-        RaycastHit2D hit = Physics2D.BoxCast(transform.position, Vector2.one, 0, new Vector2(dirX, dirY), maxHitDistance, enemyLayer);
+        RaycastHit2D hit = Physics2D.BoxCast(transform.position, Vector2.one * 2f, 0, new Vector2(dirX, dirY), maxHitDistance, enemyLayer);
         return hit.collider != null;
     }
 
