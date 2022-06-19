@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using TMPro;
 
 public class Player : MonoBehaviour
 {
@@ -25,6 +27,11 @@ public class Player : MonoBehaviour
     [SerializeField] private Player enemy;
     [SerializeField] private LayerMask enemyLayer;
 
+    [Header("UI")]
+    [SerializeField] private TextMeshProUGUI winText;
+    [SerializeField] private string winMessage;
+    [SerializeField] private Color winColor;
+
     private int jumps = 0;
 
     private new Rigidbody2D rigidbody2D;
@@ -32,6 +39,8 @@ public class Player : MonoBehaviour
     private void Awake()
     {
         rigidbody2D = GetComponent<Rigidbody2D>();
+
+        Time.timeScale = 1f;
     }
 
     private void Update()
@@ -74,7 +83,23 @@ public class Player : MonoBehaviour
 
     public void Die()
     {
+        enemy.Win();
         Destroy(gameObject);
+    }
+
+    public void Win()
+    {
+        winText.text = winMessage;
+        winText.color = winColor;
+        winText.enabled = true;
+        Time.timeScale = 0.2f;
+        StartCoroutine(RestartGame());
+    }
+
+    private IEnumerator RestartGame()
+    {
+        yield return new WaitForSeconds(3f * 0.2f);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
     public void Knockback(Vector2 force)

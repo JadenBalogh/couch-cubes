@@ -97,7 +97,7 @@ GameObject:
   - component: {fileID: 7609826150058174207}
   - component: {fileID: 7609826150058174203}
   - component: {fileID: 7609826150058174204}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Player Adam version
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -235,8 +235,23 @@ MonoBehaviour:
   rightKey: 100
   jumpKey: 119
   moveForce: 4
+  maxMoveSpeed: 5
   jumpForce: 6
   maxJumps: 2
   groundLayer:
     serializedVersion: 2
     m_Bits: 1
+  leftKnockbackKey: 106
+  rightKnockbackKey: 108
+  upKnockbackKey: 105
+  downKnockbackKey: 107
+  maxHitDistance: 2
+  minKnockbackForce: 2
+  maxKnockbackForce: 10
+  enemy: {fileID: 0}
+  enemyLayer:
+    serializedVersion: 2
+    m_Bits: 128
+  winText: {fileID: 0}
+  winMessage: Player 1 Wins!
+  winColor: {r: 1, g: 0.07075471, b: 0.07075471, a: 1}
