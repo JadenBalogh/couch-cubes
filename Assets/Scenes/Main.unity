@@ -134,6 +134,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player2
       objectReference: {fileID: 0}
+    - target: {fileID: 7609826150058174202, guid: 0475a1eb359812a4cb2616a172d31c8b, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7609826150058174204, guid: 0475a1eb359812a4cb2616a172d31c8b, type: 3}
+      propertyPath: enemy
+      value: 
+      objectReference: {fileID: 2127530422}
     - target: {fileID: 7609826150058174204, guid: 0475a1eb359812a4cb2616a172d31c8b, type: 3}
       propertyPath: jumpKey
       value: 273
@@ -145,6 +153,26 @@ PrefabInstance:
     - target: {fileID: 7609826150058174204, guid: 0475a1eb359812a4cb2616a172d31c8b, type: 3}
       propertyPath: rightKey
       value: 275
+      objectReference: {fileID: 0}
+    - target: {fileID: 7609826150058174204, guid: 0475a1eb359812a4cb2616a172d31c8b, type: 3}
+      propertyPath: upKnockbackKey
+      value: 264
+      objectReference: {fileID: 0}
+    - target: {fileID: 7609826150058174204, guid: 0475a1eb359812a4cb2616a172d31c8b, type: 3}
+      propertyPath: downKnockbackKey
+      value: 261
+      objectReference: {fileID: 0}
+    - target: {fileID: 7609826150058174204, guid: 0475a1eb359812a4cb2616a172d31c8b, type: 3}
+      propertyPath: leftKnockbackKey
+      value: 260
+      objectReference: {fileID: 0}
+    - target: {fileID: 7609826150058174204, guid: 0475a1eb359812a4cb2616a172d31c8b, type: 3}
+      propertyPath: enemyLayer.m_Bits
+      value: 64
+      objectReference: {fileID: 0}
+    - target: {fileID: 7609826150058174204, guid: 0475a1eb359812a4cb2616a172d31c8b, type: 3}
+      propertyPath: rightKnockbackKey
+      value: 262
       objectReference: {fileID: 0}
     - target: {fileID: 7609826150058174206, guid: 0475a1eb359812a4cb2616a172d31c8b, type: 3}
       propertyPath: m_RootOrder
@@ -276,6 +304,17 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1647067993 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7609826150058174204, guid: 0475a1eb359812a4cb2616a172d31c8b, type: 3}
+  m_PrefabInstance: {fileID: 377309916}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c48d610ab2f51f24d8e3b23963aecac4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1896396604
 GameObject:
   m_ObjectHideFlags: 0
@@ -409,6 +448,17 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2127530422 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7609826150058174204, guid: 0475a1eb359812a4cb2616a172d31c8b, type: 3}
+  m_PrefabInstance: {fileID: 7609826151229140810}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c48d610ab2f51f24d8e3b23963aecac4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &7609826151229140810
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -420,6 +470,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player1
       objectReference: {fileID: 0}
+    - target: {fileID: 7609826150058174204, guid: 0475a1eb359812a4cb2616a172d31c8b, type: 3}
+      propertyPath: enemy
+      value: 
+      objectReference: {fileID: 1647067993}
     - target: {fileID: 7609826150058174206, guid: 0475a1eb359812a4cb2616a172d31c8b, type: 3}
       propertyPath: m_RootOrder
       value: 1
