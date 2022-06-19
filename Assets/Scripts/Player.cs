@@ -26,6 +26,7 @@ public class Player : MonoBehaviour
     [SerializeField] private float maxKnockbackForce = 10f;
     [SerializeField] private Player enemy;
     [SerializeField] private LayerMask enemyLayer;
+    [SerializeField] private GameObject knockbackEffectPrefab;
     [SerializeField] private GameObject deathEffectPrefab;
 
     [Header("UI")]
@@ -59,19 +60,19 @@ public class Player : MonoBehaviour
         if (Input.GetKeyDown(leftKnockbackKey) && HasTarget(-1, 0))
         {
             Debug.Log("Left");
-            enemy.Knockback(GetKnockbackForce(Vector2.left));
+            enemy.Knockback(RegisterKnockback(Vector2.left));
         }
         else if (Input.GetKeyDown(rightKnockbackKey) && HasTarget(1, 0))
         {
-            enemy.Knockback(GetKnockbackForce(Vector2.right));
+            enemy.Knockback(RegisterKnockback(Vector2.right));
         }
         else if (Input.GetKeyDown(upKnockbackKey) && HasTarget(0, 1))
         {
-            enemy.Knockback(GetKnockbackForce(Vector2.up));
+            enemy.Knockback(RegisterKnockback(Vector2.up));
         }
         else if (Input.GetKeyDown(downKnockbackKey) && HasTarget(0, -1))
         {
-            enemy.Knockback(GetKnockbackForce(Vector2.down));
+            enemy.Knockback(RegisterKnockback(Vector2.down));
         }
 
         float moveMult = 1f;
@@ -109,8 +110,10 @@ public class Player : MonoBehaviour
         rigidbody2D.AddForce(force, ForceMode2D.Impulse);
     }
 
-    private Vector2 GetKnockbackForce(Vector2 dir)
+    private Vector2 RegisterKnockback(Vector2 dir)
     {
+        Instantiate(knockbackEffectPrefab, transform.position, Quaternion.AngleAxis(Vector2.Angle(Vector2.up, dir), Vector3.forward));
+
         float enemyDist = Vector2.Distance(transform.position, enemy.transform.position);
         float knockbackForce = Mathf.Lerp(maxKnockbackForce, minKnockbackForce, enemyDist / maxHitDistance);
         return dir * knockbackForce;
