@@ -8,15 +8,8 @@ public class CameraFollow : MonoBehaviour
     [SerializeField] private float maxZoom = 6f;
     [SerializeField] private float maxOffset = 3f;
 
-    // Start is called before the first frame update
-    void Start()
+    private void FixedUpdate()
     {
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
+        
     }
 }
