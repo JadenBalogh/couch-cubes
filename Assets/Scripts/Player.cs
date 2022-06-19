@@ -35,6 +35,7 @@ public class Player : MonoBehaviour
     [SerializeField] private Color winColor;
 
     private int jumps = 0;
+    private bool canKnockback = true;
 
     private new Rigidbody2D rigidbody2D;
 
@@ -58,8 +59,10 @@ public class Player : MonoBehaviour
             jumps++;
         }
 
-        if (Input.GetKeyDown(leftKnockbackKey))
+        if (Input.GetKeyDown(leftKnockbackKey) && canKnockback)
         {
+            StartCoroutine(KnockbackCooldown());
+
             Instantiate(knockbackEffectPrefab, transform.position, Quaternion.AngleAxis(Vector2.SignedAngle(Vector2.up, Vector2.left), Vector3.forward));
 
             if (HasTarget(-1, 0))
@@ -67,8 +70,10 @@ public class Player : MonoBehaviour
                 enemy.Knockback(RegisterKnockback(Vector2.left));
             }
         }
-        else if (Input.GetKeyDown(rightKnockbackKey))
+        else if (Input.GetKeyDown(rightKnockbackKey) && canKnockback)
         {
+            StartCoroutine(KnockbackCooldown());
+
             Instantiate(knockbackEffectPrefab, transform.position, Quaternion.AngleAxis(Vector2.SignedAngle(Vector2.up, Vector2.right), Vector3.forward));
 
             if (HasTarget(1, 0))
@@ -76,8 +81,10 @@ public class Player : MonoBehaviour
                 enemy.Knockback(RegisterKnockback(Vector2.right));
             }
         }
-        else if (Input.GetKeyDown(upKnockbackKey))
+        else if (Input.GetKeyDown(upKnockbackKey) && canKnockback)
         {
+            StartCoroutine(KnockbackCooldown());
+
             Instantiate(knockbackEffectPrefab, transform.position, Quaternion.AngleAxis(0, Vector3.forward));
 
             if (HasTarget(0, 1))
@@ -85,8 +92,10 @@ public class Player : MonoBehaviour
                 enemy.Knockback(RegisterKnockback(Vector2.up));
             }
         }
-        else if (Input.GetKeyDown(downKnockbackKey))
+        else if (Input.GetKeyDown(downKnockbackKey) && canKnockback)
         {
+            StartCoroutine(KnockbackCooldown());
+            
             Instantiate(knockbackEffectPrefab, transform.position, Quaternion.AngleAxis(Vector2.SignedAngle(Vector2.up, Vector2.down), Vector3.forward));
 
             if (HasTarget(0, -1))
@@ -149,5 +158,12 @@ public class Player : MonoBehaviour
         {
             jumps = 0;
         }
+    }
+
+    private IEnumerator KnockbackCooldown()
+    {
+        canKnockback = false;
+        yield return new WaitForSeconds(0.2f);
+        canKnockback = true;
     }
 }

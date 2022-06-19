@@ -3309,7 +3309,7 @@ MonoBehaviour:
   leftKnockbackKey: 260
   rightKnockbackKey: 262
   upKnockbackKey: 264
-  downKnockbackKey: 262
+  downKnockbackKey: 261
   maxHitDistance: 3
   minKnockbackForce: 8
   maxKnockbackForce: 16
