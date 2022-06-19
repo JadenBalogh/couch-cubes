@@ -60,6 +60,10 @@ PrefabInstance:
       value: 0.05
       objectReference: {fileID: 0}
     - target: {fileID: 7388907756617463598, guid: 5f0dde1a719c3f14cb6ddd1366d332b6, type: 3}
+      propertyPath: playOnAwake
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7388907756617463598, guid: 5f0dde1a719c3f14cb6ddd1366d332b6, type: 3}
       propertyPath: ShapeModule.type
       value: 2
       objectReference: {fileID: 0}
@@ -129,7 +133,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8323202325416061856, guid: 5f0dde1a719c3f14cb6ddd1366d332b6, type: 3}
       propertyPath: m_Name
-      value: Force Push
+      value: Force Push Variant
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5f0dde1a719c3f14cb6ddd1366d332b6, type: 3}
