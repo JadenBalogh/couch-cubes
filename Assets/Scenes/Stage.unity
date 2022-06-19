@@ -934,6 +934,7 @@ GameObject:
   - component: {fileID: 689961286}
   - component: {fileID: 689961288}
   - component: {fileID: 689961287}
+  - component: {fileID: 689961289}
   m_Layer: 0
   m_Name: Top Right Spike
   m_TagString: Untagged
@@ -1027,6 +1028,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &689961289
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 689961285}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0999bd6f471805429865bb1703af973, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &751995395
 GameObject:
   m_ObjectHideFlags: 0
@@ -6247,6 +6260,7 @@ GameObject:
   - component: {fileID: 1142535478}
   - component: {fileID: 1142535480}
   - component: {fileID: 1142535479}
+  - component: {fileID: 1142535481}
   m_Layer: 0
   m_Name: Top Left Spike
   m_TagString: Untagged
@@ -6340,6 +6354,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1142535481
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1142535477}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0999bd6f471805429865bb1703af973, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1146466345
 GameObject:
   m_ObjectHideFlags: 0
@@ -6743,6 +6769,7 @@ GameObject:
   - component: {fileID: 1419968778}
   - component: {fileID: 1419968780}
   - component: {fileID: 1419968779}
+  - component: {fileID: 1419968781}
   m_Layer: 0
   m_Name: Secret Left Spike
   m_TagString: Untagged
@@ -6836,6 +6863,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1419968781
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1419968777}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0999bd6f471805429865bb1703af973, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1498481196
 GameObject:
   m_ObjectHideFlags: 0
@@ -6931,6 +6970,7 @@ GameObject:
   - component: {fileID: 1599731702}
   - component: {fileID: 1599731704}
   - component: {fileID: 1599731703}
+  - component: {fileID: 1599731705}
   m_Layer: 0
   m_Name: Secret Right Spike
   m_TagString: Untagged
@@ -7024,6 +7064,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1599731705
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1599731701}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0999bd6f471805429865bb1703af973, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1680923037
 GameObject:
   m_ObjectHideFlags: 0
