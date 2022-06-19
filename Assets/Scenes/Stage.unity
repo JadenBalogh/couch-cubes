@@ -3132,14 +3132,14 @@ MonoBehaviour:
   maxJumps: 2
   groundLayer:
     serializedVersion: 2
-    m_Bits: 1
+    m_Bits: 193
   leftKnockbackKey: 106
   rightKnockbackKey: 108
   upKnockbackKey: 105
   downKnockbackKey: 107
-  maxHitDistance: 2
-  minKnockbackForce: 2
-  maxKnockbackForce: 10
+  maxHitDistance: 3
+  minKnockbackForce: 8
+  maxKnockbackForce: 16
   enemy: {fileID: 7609826149959814353}
   enemyLayer:
     serializedVersion: 2
@@ -3305,14 +3305,14 @@ MonoBehaviour:
   maxJumps: 2
   groundLayer:
     serializedVersion: 2
-    m_Bits: 1
+    m_Bits: 193
   leftKnockbackKey: 260
   rightKnockbackKey: 262
   upKnockbackKey: 264
   downKnockbackKey: 262
-  maxHitDistance: 2
-  minKnockbackForce: 2
-  maxKnockbackForce: 10
+  maxHitDistance: 3
+  minKnockbackForce: 8
+  maxKnockbackForce: 16
   enemy: {fileID: 7609826149767001545}
   enemyLayer:
     serializedVersion: 2
