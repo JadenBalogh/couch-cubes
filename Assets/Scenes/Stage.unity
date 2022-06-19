@@ -3128,7 +3128,7 @@ MonoBehaviour:
   jumpKey: 119
   moveForce: 4
   maxMoveSpeed: 5
-  jumpForce: 6
+  jumpForce: 8
   maxJumps: 2
   groundLayer:
     serializedVersion: 2
@@ -3301,7 +3301,7 @@ MonoBehaviour:
   jumpKey: 273
   moveForce: 4
   maxMoveSpeed: 5
-  jumpForce: 6
+  jumpForce: 8
   maxJumps: 2
   groundLayer:
     serializedVersion: 2
