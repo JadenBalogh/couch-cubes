@@ -3126,7 +3126,7 @@ MonoBehaviour:
   leftKey: 97
   rightKey: 100
   jumpKey: 119
-  moveForce: 4
+  moveForce: 24
   maxMoveSpeed: 5
   jumpForce: 8
   maxJumps: 2
@@ -3299,7 +3299,7 @@ MonoBehaviour:
   leftKey: 276
   rightKey: 275
   jumpKey: 273
-  moveForce: 4
+  moveForce: 24
   maxMoveSpeed: 5
   jumpForce: 8
   maxJumps: 2

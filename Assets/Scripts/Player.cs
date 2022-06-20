@@ -36,6 +36,7 @@ public class Player : MonoBehaviour
 
     private int jumps = 0;
     private bool canKnockback = true;
+    private Vector2 movement;
 
     private new Rigidbody2D rigidbody2D;
 
@@ -95,7 +96,7 @@ public class Player : MonoBehaviour
         else if (Input.GetKeyDown(downKnockbackKey) && canKnockback)
         {
             StartCoroutine(KnockbackCooldown());
-            
+
             Instantiate(knockbackEffectPrefab, transform.position, Quaternion.AngleAxis(Vector2.SignedAngle(Vector2.up, Vector2.down), Vector3.forward));
 
             if (HasTarget(0, -1))
@@ -109,7 +110,12 @@ public class Player : MonoBehaviour
         {
             moveMult = 1f - Mathf.Clamp01(Mathf.Abs(rigidbody2D.velocity.x) / maxMoveSpeed);
         }
-        rigidbody2D.AddForce(Vector2.right * horizontal * moveForce * moveMult);
+        movement = Vector2.right * horizontal * moveForce * moveMult;
+    }
+
+    private void FixedUpdate()
+    {
+        rigidbody2D.AddForce(movement);
     }
 
     public void Die()
